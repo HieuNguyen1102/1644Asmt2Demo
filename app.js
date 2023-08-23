@@ -5,7 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-var exphbs = require('express-handlebars');
 const app = express();
 
 
