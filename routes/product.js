@@ -52,9 +52,17 @@ router.get('/category/:category', async (req, res) => {
        var products = await ProductModel.find({ category: category });
    }
    res.render('product/productList', { products: products });
+})
+
+router.get('/sort/price/asc', async (req, res) => {
+   var products = await ProductModel.find().sort({ price: 1 });
+   res.render('product/productList', { products: products });
 });
 
-
+router.get('/sort/price/desc', async (req, res) => {
+   var products = await ProductModel.find().sort({ price: -1 });
+   res.render('product/productList', { products: products });
+});
 
 module.exports = router;
 
