@@ -64,6 +64,16 @@ router.get('/sort/price/desc', async (req, res) => {
    res.render('product/productList', { products: products });
 });
 
+router.get('/sort/name/asc', async (req,res) => {
+   var products = await ProductModel.find().sort({ name: 1 });
+   res.render('product/productList', { products: products });
+})
+
+router.get('/sort/name/desc', async (req, res) => {
+   var products = await ProductModel.find().sort({ name: -1 });
+   res.render('product/productList', { products: products });
+})
+
 module.exports = router;
 
 

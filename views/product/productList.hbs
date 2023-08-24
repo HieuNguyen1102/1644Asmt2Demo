@@ -138,7 +138,14 @@
         <li ><a href="/product/category/Legos" style="color: black;">Legos</a></li>
     </ul>
 </div>
-{{! End Category Fil}}              
+{{! End Category Fil}}        
+      <select class="form-control" onchange="handleSortChange(this)">
+            <option value="#" disabled selected>Select option to Sort</option>
+            <option value="/product/sort/price/asc">Sort by Price ascending</option>
+            <option value="/product/sort/price/desc">Sort by Price descending</option>
+            <option value="/product/sort/name/asc">Sort by Name ascending</option>
+            <option value="/product/sort/name/desc">Sort by Name descending</option>
+      </select>
                     </div>
                 </div>
             </div>
